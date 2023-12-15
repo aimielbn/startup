@@ -1,12 +1,32 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-rose-100 to-teal-100">
-    <nav class="container mx-auto px-3 h-24 flex items-center mb-10">
-      <NuxtLink to="/">
-        <h1 class="text-5xl">Startup</h1>
-      </NuxtLink>
-    </nav>
-    <div class="container mx-auto px-3">
+  <Head>
+    <Title>Startup</Title>
+    <Meta name="description" content="Startup" />
+  </Head>
+  <LayoutsBase>
+    <template #navigation>
+      <NavsNav>
+        <template #logo>
+          <TitresLogo>TechnoChef</TitresLogo>
+        </template>
+
+        <template #links>
+          <LinksNavLink to="/">Accueil</LinksNavLink>
+          <LinksNavLink to="/produits">Produits</LinksNavLink>
+          <LinksNavLink to="/equipe">Équipe</LinksNavLink>
+          <LinksNavLink to="/societe">Société</LinksNavLink>
+          <LinksNavLink to="/contact">Contact</LinksNavLink>
+          <LinksNavLink to="/blog">Blog</LinksNavLink>
+        </template>
+      </NavsNav>
+    </template>
+
+    <template #content>
       <slot />
-    </div>
-  </div>
+    </template>
+
+    <template #footer>
+      <FootersBasic />
+    </template>
+  </LayoutsBase>
 </template>

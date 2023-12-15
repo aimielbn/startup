@@ -1,15 +1,21 @@
 <script setup>
 const query = gql`
-  query Page {
-    page(where: { slug: "produits" }) {
-      createdAt
+  query Produits {
+    produits {
       id
-      publishedAt
-      slug
       titre
+      slug
+      prix
+      description
+      createdAt
+      publishedAt
       updatedAt
-      texte {
-        html
+      image {
+        url(
+          transformation: {
+            image: { resize: { fit: crop, height: 1024, width: 1024 } }
+          }
+        )
       }
     }
   }

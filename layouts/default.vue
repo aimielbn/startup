@@ -16,7 +16,7 @@
           <LinksNavLink to="/equipe">Équipe</LinksNavLink>
           <LinksNavLink to="/societe">Société</LinksNavLink>
           <LinksNavLink to="/contact">Contact</LinksNavLink>
-          <LinksNavLink to="/blog">Blog</LinksNavLink>
+          <LinksNavLink to="/articles">Blog</LinksNavLink>
         </template>
       </NavsNav>
     </template>

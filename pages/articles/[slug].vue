@@ -1,0 +1,46 @@
+<script setup>
+const query = gql`
+  query MyQuery($slug: String!) {
+    article(where: { slug: $slug }) {
+      id
+      titre
+      texte
+      slug
+      createdAt
+      publishedAt
+      updatedAt
+      image {
+        url(
+          transformation: {
+            image: { resize: { fit: crop, height: 1024, width: 1024 } }
+          }
+        )
+      }
+    }
+  }
+`;
+
+const article = ref();
+
+const route = useRoute();
+const { data } = await useAsyncQuery(query, {
+  slug: route.params.slug,
+});
+
+console.log(data.value);
+article.value = data.value.article;
+</script>
+
+<template>
+  <div v-if="article" class="">
+    <h2>{{ article.titre }}</h2>
+    <div class="">
+      <div>
+        <NuxtImg :src="article.image.url" :alt="article.titre" class="" />
+      </div>
+      <div>
+        <p>{{ article.texte }}</p>
+      </div>
+    </div>
+  </div>
+</template>

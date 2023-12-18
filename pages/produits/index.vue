@@ -1,12 +1,12 @@
 <script setup>
 const query = gql`
-  query Produits {
+  query MyQuery {
     produits {
       id
       titre
       slug
-      prix
       description
+      prix
       createdAt
       publishedAt
       updatedAt
@@ -21,16 +21,37 @@ const query = gql`
   }
 `;
 
-const contenuProduits = ref();
+const produits = ref();
 const { data } = await useAsyncQuery(query);
 console.log(data.value);
-contenuProduits.value = data.value.page;
+produits.value = data.value.produits;
 </script>
 
 <template>
-  <h2 class="text-2xl">
-    {{ contenuProduits.titre }}
-  </h2>
+  <TitresH2>Produits</TitresH2>
+  <p>
+    Bienvenue sur notre page "Produits", le foyer de l'innovation et de
+    l'excellence. Explorez notre sélection exceptionnelle d'articles
+    soigneusement choisis pour inspirer, améliorer et simplifier votre
+    quotidien. De la technologie avant-gardiste aux solutions élégantes,
+    découvrez l'art de l'ingéniosité conçu pour rendre votre vie plus riche et
+    plus pratique. Bienvenue dans l'univers de nos produits, où l'exceptionnel
+    devient ordinaire.
+  </p>
+  <ul v-if="produits" class="">
+    <li v-for="produit in produits" :key="produit.id" class="">
+      <NuxtLink :to="`/produits/${produit.slug}`" class="">
+        <NuxtImg :src="produit.image.url" :alt="produit.nom" class="">
+        </NuxtImg>
+        <h2 class="text-2xl">
+          {{ produit.titre }}
+        </h2>
+        <p>{{ produit.prix }}€</p>
+      </NuxtLink>
+    </li>
+  </ul>
 
-  <div v-html="contenuProduits.texte.html"></div>
+  <ul v-else>
+    <li>Chargement...</li>
+  </ul>
 </template>

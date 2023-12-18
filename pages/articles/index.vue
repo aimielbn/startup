@@ -1,30 +1,45 @@
 <script setup>
 const query = gql`
-  query Page {
-    page(where: { slug: "blog" }) {
-      createdAt
+  query MyQuery {
+    articles {
       id
-      publishedAt
-      slug
       titre
+      slug
+      texte
+      createdAt
+      publishedAt
       updatedAt
-      texte {
-        html
+      image {
+        url(
+          transformation: {
+            image: { resize: { fit: crop, height: 1024, width: 1024 } }
+          }
+        )
       }
     }
   }
 `;
 
-const contenuBlog = ref();
+const articles = ref();
 const { data } = await useAsyncQuery(query);
 console.log(data.value);
-contenuBlog.value = data.value.page;
+articles.value = data.value.articles;
 </script>
 
 <template>
-  <h2 class="text-2xl">
-    {{ contenuBlog.titre }}
-  </h2>
+  <ul v-if="articles" class="">
+    <li v-for="article in articles" :key="article.id" class="">
+      <NuxtLink :to="`/articles/${article.slug}`" class="">
+        <NuxtImg :src="article.image.url" :alt="article.nom" class="">
+        </NuxtImg>
+        <h2 class="text-2xl">
+          {{ article.titre }}
+        </h2>
+      </NuxtLink>
+    </li>
+  </ul>
 
-  <div v-html="contenuBlog.texte.html"></div>
+  <ul v-else>
+    <li>Chargement...</li>
+  </ul>
 </template>

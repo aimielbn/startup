@@ -32,7 +32,7 @@ membres.value = data.value.membres;
   <ul v-if="membres" class="">
     <li v-for="membre in membres" :key="membre.id" class="">
       <NuxtLink :to="`/membres/${membre.slug}`" class="">
-        <NuxtImg :src="membre.image.url" :alt="membre.nom" class=""> </NuxtImg>
+        <NuxtImg :src="membre.image.url" :alt="membre.nom" class=""/>
         <h2 class="text-2xl">
           {{ membre.nom }}
         </h2>

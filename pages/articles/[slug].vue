@@ -1,10 +1,12 @@
 <script setup>
 const query = gql`
-  query MyQuery($slug: String!) {
+  query Article($slug: String!) {
     article(where: { slug: $slug }) {
       id
       titre
-      texte
+      texte {
+        html
+      }
       slug
       createdAt
       publishedAt
@@ -13,6 +15,7 @@ const query = gql`
         url(
           transformation: {
             image: { resize: { fit: crop, height: 1024, width: 1024 } }
+            document: { output: { format: webp } }
           }
         )
       }
@@ -39,7 +42,7 @@ article.value = data.value.article;
         <NuxtImg :src="article.image.url" :alt="article.titre" class="" />
       </div>
       <div>
-        <p>{{ article.texte }}</p>
+        <p v-html="article.texte.html"></p>
       </div>
     </div>
   </div>

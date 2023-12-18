@@ -1,11 +1,10 @@
 <script setup>
 const query = gql`
-  query MyQuery {
+  query Articles {
     articles {
       id
       titre
       slug
-      texte
       createdAt
       publishedAt
       updatedAt
@@ -13,6 +12,7 @@ const query = gql`
         url(
           transformation: {
             image: { resize: { fit: crop, height: 1024, width: 1024 } }
+            document: { output: { format: webp } }
           }
         )
       }
@@ -30,8 +30,7 @@ articles.value = data.value.articles;
   <ul v-if="articles" class="">
     <li v-for="article in articles" :key="article.id" class="">
       <NuxtLink :to="`/articles/${article.slug}`" class="">
-        <NuxtImg :src="article.image.url" :alt="article.nom" class="">
-        </NuxtImg>
+        <NuxtImg :src="article.image.url" :alt="article.nom" class="" />
         <h2 class="text-2xl">
           {{ article.titre }}
         </h2>

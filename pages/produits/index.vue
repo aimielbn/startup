@@ -41,8 +41,7 @@ produits.value = data.value.produits;
   <ul v-if="produits" class="">
     <li v-for="produit in produits" :key="produit.id" class="">
       <NuxtLink :to="`/produits/${produit.slug}`" class="">
-        <NuxtImg :src="produit.image.url" :alt="produit.nom" class="">
-        </NuxtImg>
+        <NuxtImg :src="produit.image.url" :alt="produit.nom" class="" />
         <h2 class="text-2xl">
           {{ produit.titre }}
         </h2>

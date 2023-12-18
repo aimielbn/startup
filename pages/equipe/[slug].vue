@@ -1,16 +1,15 @@
 <script setup>
 const query = gql`
   query MyQuery($slug: String!) {
-    produit(where: { slug: $slug }) {
+    membre(where: { slug: $slug }) {
       id
-      titre
+      nom
       description
       slug
       createdAt
       publishedAt
       updatedAt
-      prix
-      image {
+      photo {
         url(
           transformation: {
             image: { resize: { fit: crop, height: 1024, width: 1024 } }
@@ -21,7 +20,7 @@ const query = gql`
   }
 `;
 
-const produit = ref();
+const membre = ref();
 
 const route = useRoute();
 const { data } = await useAsyncQuery(query, {
@@ -29,19 +28,19 @@ const { data } = await useAsyncQuery(query, {
 });
 
 console.log(data.value);
-produit.value = data.value.produit;
+membre.value = data.value.membre;
 </script>
 
 <template>
-  <div v-if="produit" class="">
-    <h2>{{ produit.titre }}</h2>
+  <div v-if="membre" class="">
+    <h2>{{ membre.titre }}</h2>
     <div class="">
       <div>
-        <NuxtImg :src="produit.image.url" :alt="produit.titre" class="" />
+        <NuxtImg :src="membre.image.url" :alt="membre.titre" class="" />
       </div>
       <div>
-        <p>{{ produit.prix }}€</p>
-        <p>{{ produit.description }}</p>
+        <p>{{ membre.prix }}€</p>
+        <p>{{ membre.description }}</p>
       </div>
     </div>
   </div>

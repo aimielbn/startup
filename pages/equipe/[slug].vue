@@ -36,10 +36,10 @@ membre.value = data.value.membre;
     <h2>{{ membre.titre }}</h2>
     <div class="">
       <div>
-        <NuxtImg :src="membre.image.url" :alt="membre.titre" class="" />
+        <NuxtImg :src="membre.photo.url" :alt="membre.titre" class="" />
       </div>
       <div>
-        <p>{{ membre.prix }}€</p>
+        <p>{{ membre.nom }}</p>
         <p>{{ membre.description }}</p>
       </div>
     </div>

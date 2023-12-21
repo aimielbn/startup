@@ -13,7 +13,7 @@ defineProps({
     target="_blank"
     class="group inline-flex space-x-1.5 items-baseline"
   >
-    <span class="underline text-pink-900 group-hover:text-pink-500 transition">
+    <span class="underline text-blue-900 group-hover:text-blue-500 transition">
       <slot />
     </span>
     <span>

@@ -1,5 +1,5 @@
 <template>
-  <p class="text-pink-950 text-base font-serif">
+  <p class="text-blue-950 text-base font-serif">
     <slot />
   </p>
 </template>

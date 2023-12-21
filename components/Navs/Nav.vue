@@ -5,7 +5,7 @@ const isOpen = ref(false);
 <template>
   <nav>
     <div
-      class="flex items-center justify-between flex-wrap bg-pink-500 h-20 px-4 border-b border-pink-50"
+      class="flex items-center justify-between flex-wrap bg-blue-500 h-20 px-4 border-b border-blue-50"
     >
       <div>
         <nuxt-link to="/">
@@ -23,10 +23,10 @@ const isOpen = ref(false);
             <button @click="isOpen = !isOpen">
               <i
                 v-if="!isOpen"
-                class="fa-solid fa-bars text-3xl text-pink-50"
+                class="fa-solid fa-bars text-3xl text-blue-50"
               ></i>
               <div v-else>
-                <i class="fa-solid fa-xmark text-3xl text-pink-50"></i>
+                <i class="fa-solid fa-xmark text-3xl text-blue-50"></i>
               </div>
             </button>
           </li>
@@ -36,7 +36,7 @@ const isOpen = ref(false);
 
     <ul
       v-show="isOpen"
-      class="md:hidden flex flex-col bg-pink-400 space-y-2 px-4 py-8 border-b border-white bg-gray-900"
+      class="md:hidden flex flex-col bg-blue-400 space-y-2 px-4 py-8 border-b border-white bg-gray-900"
     >
       <slot name="links"></slot>
     </ul>

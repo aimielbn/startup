@@ -33,13 +33,12 @@ membre.value = data.value.membre;
 
 <template>
   <div v-if="membre" class="">
-    <h2>{{ membre.titre }}</h2>
+    <h2>{{ membre.nom }}</h2>
     <div class="">
       <div>
         <NuxtImg :src="membre.photo.url" :alt="membre.titre" class="" />
       </div>
       <div>
-        <p>{{ membre.nom }}</p>
         <p>{{ membre.description }}</p>
       </div>
     </div>

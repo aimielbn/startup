@@ -22,6 +22,6 @@ const handleChange = (event) => {
     :id="name"
     :value="modelValue"
     @input="handleChange"
-    class="focus:outline-none px-4 py-2 w-full bg-white text-pink-950"
+    class="focus:outline-none px-4 py-2 w-full bg-white text-blue-950"
   />
 </template>

@@ -35,8 +35,9 @@ article.value = data.value.article;
 </script>
 
 <template>
+    <Container>
   <div v-if="article" class="">
-    <h2>{{ article.titre }}</h2>
+    <TitresH2>{{ article.titre }}</TitresH2>
     <div class="">
       <div>
         <NuxtImg :src="article.image.url" :alt="article.titre" class="" />
@@ -46,4 +47,5 @@ article.value = data.value.article;
       </div>
     </div>
   </div>
+  </Container>
 </template>

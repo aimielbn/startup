@@ -33,16 +33,16 @@ produit.value = data.value.produit;
 </script>
 
 <template>
+  <Container>
   <div v-if="produit" class="">
-    <h2>{{ produit.titre }}</h2>
-    <div class="">
+    <TitresH2>{{ produit.titre }}</TitresH2>
       <div>
         <NuxtImg :src="produit.image.url" :alt="produit.titre" class="" />
       </div>
       <div>
-        <p>{{ produit.prix }}€</p>
+        <TitresH3>{{ produit.prix }}€</TitresH3>
         <p>{{ produit.description }}</p>
       </div>
     </div>
-  </div>
+  </Container>
 </template>

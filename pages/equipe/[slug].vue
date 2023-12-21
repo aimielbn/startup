@@ -36,7 +36,7 @@ membre.value = data.value.membre;
     <h2>{{ membre.nom }}</h2>
     <div class="">
       <div>
-        <NuxtImg :src="membre.photo.url" :alt="membre.titre" class="" />
+        <NuxtImg :src="membre.photo.url" :alt="membre.nom" class="" />
       </div>
       <div>
         <p>{{ membre.description }}</p>

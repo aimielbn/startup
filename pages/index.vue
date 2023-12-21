@@ -22,9 +22,11 @@ contenuAccueil.value = data.value.page;
 </script>
 
 <template>
-  <TitresH2>
-    {{ contenuAccueil.titre }}
-  </TitresH2>
+  <Container>
+    <TitresH1>
+      {{ contenuAccueil.titre }}
+    </TitresH1>
 
-  <div v-html="contenuAccueil.texte.html"></div>
+    <div v-html="contenuAccueil.texte.html"></div>
+  </Container>
 </template>

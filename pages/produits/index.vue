@@ -28,7 +28,8 @@ produits.value = data.value.produits;
 </script>
 
 <template>
-  <TitresH2>Produits</TitresH2>
+  <Container>
+  <TitresH1>Produits</TitresH1>
   <p>
     Bienvenue sur notre page "Produits", le foyer de l'innovation et de
     l'excellence. Explorez notre sélection exceptionnelle d'articles
@@ -39,18 +40,23 @@ produits.value = data.value.produits;
     devient ordinaire.
   </p>
   <ul v-if="produits" class="">
+    <ListsGrid>
     <li v-for="produit in produits" :key="produit.id" class="">
+      <CardsUserCard>
       <NuxtLink :to="`/produits/${produit.slug}`" class="">
         <NuxtImg :src="produit.image.url" :alt="produit.nom" class="" />
-        <h2 class="text-2xl">
+        <TitresH3>
           {{ produit.titre }}
-        </h2>
-        <p>{{ produit.prix }}€</p>
+        </TitresH3>
+        <TitresH4>{{ produit.prix }}€</TitresH4>
       </NuxtLink>
+      </CardsUserCard>
     </li>
+    </ListsGrid>
   </ul>
 
   <ul v-else>
     <li>Chargement...</li>
   </ul>
+  </Container>
 </template>

@@ -27,21 +27,27 @@ membres.value = data.value.membres;
 </script>
 
 <template>
-  <TitresH2>Équipe</TitresH2>
+    <Container>
+  <TitresH1>Équipe</TitresH1>
 
   <ul v-if="membres" class="">
+    <ListsGrid>
     <li v-for="membre in membres" :key="membre.id" class="">
+        <CardsUserCard>
       <NuxtLink :to="`/membres/${membre.slug}`" class="">
         <NuxtImg :src="membre.photo.url" :alt="membre.nom" class="" />
-        <h2 class="text-2xl">
+        <TitresH3>
           {{ membre.nom }}
-        </h2>
-        <p>{{ membre.description }}</p>
+        </TitresH3>
+        
       </NuxtLink>
+      </CardsUserCard>
     </li>
+    </ListsGrid>
   </ul>
 
   <ul v-else>
     <li>Chargement...</li>
   </ul>
+  </Container>
 </template>

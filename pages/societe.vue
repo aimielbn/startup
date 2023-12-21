@@ -22,9 +22,11 @@ contenuSociete.value = data.value.page;
 </script>
 
 <template>
-  <h2 class="text-2xl">
+  <Container>
+  <TitresH1>
     {{ contenuSociete.titre }}
-  </h2>
+  </TitresH1>
 
-  <div v-html="contenuSociete.texte.html"></div>
+  <p v-html="contenuSociete.texte.html"></p>
+  </Container>
 </template>

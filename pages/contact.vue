@@ -22,9 +22,11 @@ contenuContact.value = data.value.page;
 </script>
 
 <template>
-  <h2 class="text-2xl">
-    {{ contenuContact.titre }}
-  </h2>
+  <Container>
+    <TitresH1>
+      {{ contenuContact.titre }}
+    </TitresH1>
 
-  <div v-html="contenuContact.texte.html"></div>
+    <p v-html="contenuContact.texte.html"></p>
+  </Container>
 </template>

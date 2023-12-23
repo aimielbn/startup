@@ -32,15 +32,17 @@ membre.value = data.value.membre;
 </script>
 
 <template>
-  <div v-if="membre" class="">
-    <h2>{{ membre.nom }}</h2>
-    <div class="">
+  <Container>
+  <div v-if="membre" class="max-w-lg space-y-8 mx-auto">
+    <TitresH2>{{ membre.nom }}</TitresH2>
+    <CardsUserCard>
       <div>
         <NuxtImg :src="membre.photo.url" :alt="membre.nom" class="" />
       </div>
-      <div>
+      <div class="pt-5">
         <p>{{ membre.description }}</p>
       </div>
-    </div>
+    </CardsUserCard>
   </div>
+  </Container>
 </template>

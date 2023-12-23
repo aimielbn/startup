@@ -28,5 +28,26 @@ contenuContact.value = data.value.page;
     </TitresH1>
 
     <p v-html="contenuContact.texte.html"></p>
+
+    <TitresH3>Envoyez-nous un mail !</TitresH3>
+    <InputsForm>
+      <ul>
+        <li>
+          <InputsLabel>Nom : </InputsLabel>
+          <input type="text" id="name" name="user_name" />
+        </li>
+        <li>
+          <InputsLabel>E-mail : </InputsLabel>
+          <input type="email" id="mail" name="user_email" />
+        </li>
+        <li>
+          <InputsLabel>Message : </InputsLabel>
+          <InputsTextarea></InputsTextarea>
+        </li>
+      </ul>
+
+      <BoutonsPrimaire type="submit">Envoyer</BoutonsPrimaire>
+
+    </InputsForm>
   </Container>
 </template>

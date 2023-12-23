@@ -34,7 +34,7 @@ membres.value = data.value.membres;
     <ListsGrid>
     <li v-for="membre in membres" :key="membre.id" class="">
         <CardsUserCard>
-      <NuxtLink :to="`/membres/${membre.slug}`" class="">
+      <NuxtLink :to="`/equipe/${membre.slug}`" class="">
         <NuxtImg :src="membre.photo.url" :alt="membre.nom" class="" />
         <TitresH3>
           {{ membre.nom }}

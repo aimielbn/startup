@@ -24,9 +24,9 @@ const isOpen = ref(false);
               <i
                 v-if="!isOpen"
                 class="fa-solid fa-bars text-3xl text-blue-50"
-              ></i>
+              >Menu</i>
               <div v-else>
-                <i class="fa-solid fa-xmark text-3xl text-blue-50"></i>
+                <i class="fa-solid fa-xmark text-3xl text-blue-50">X</i>
               </div>
             </button>
           </li>
@@ -36,7 +36,7 @@ const isOpen = ref(false);
 
     <ul
       v-show="isOpen"
-      class="md:hidden flex flex-col bg-blue-400 space-y-2 px-4 py-8 border-b border-white bg-gray-900"
+      class="md:hidden flex flex-col bg-gradient-to-r from-blue-500 to-blue-600 space-y-2 px-4 py-8 border-b border-white bg-gray-900"
     >
       <slot name="links"></slot>
     </ul>

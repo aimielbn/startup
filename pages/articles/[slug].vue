@@ -36,16 +36,16 @@ article.value = data.value.article;
 
 <template>
     <Container>
-  <div v-if="article" class="">
+  <div v-if="article" class="max-w-lg space-y-8 mx-auto">
     <TitresH2>{{ article.titre }}</TitresH2>
-    <div class="">
+    <CardsUserCard>
       <div>
         <NuxtImg :src="article.image.url" :alt="article.titre" class="" />
       </div>
-      <div>
+      <div class="pt-5">
         <p v-html="article.texte.html"></p>
       </div>
-    </div>
+    </CardsUserCard>
   </div>
   </Container>
 </template>

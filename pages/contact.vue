@@ -34,15 +34,15 @@ contenuContact.value = data.value.page;
       <ul>
         <li>
           <InputsLabel>Nom : </InputsLabel>
-          <input type="text" id="name" name="user_name" />
+          <input class="border-blue-950 border-2 rounded-xl mb-5" type="text" id="name" name="user_name required" />
         </li>
         <li>
           <InputsLabel>E-mail : </InputsLabel>
-          <input type="email" id="mail" name="user_email" />
+          <input class="border-blue-950 border-2 rounded-xl mb-5" type="email" id="mail" name="user_email required" />
         </li>
         <li>
           <InputsLabel>Message : </InputsLabel>
-          <InputsTextarea></InputsTextarea>
+          <InputsTextarea class="border-blue-950 border-2 rounded-xl mb-5"></InputsTextarea>
         </li>
       </ul>
 

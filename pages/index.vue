@@ -28,5 +28,13 @@ contenuAccueil.value = data.value.page;
     </TitresH1>
 
     <div v-html="contenuAccueil.texte.html"></div>
+
+    <div
+      class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-8 my-8"
+    >
+      <CardsIconCard to="/produits">Produits</CardsIconCard>
+      <CardsIconCard to="/contact">Contact</CardsIconCard>
+      <CardsIconCard to="/articles">Blog</CardsIconCard>
+    </div>
   </Container>
 </template>

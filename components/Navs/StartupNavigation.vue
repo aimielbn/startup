@@ -1,7 +1,7 @@
 <template>
   <NavsNav>
     <template #logo>
-      <TitresLogo>Design System</TitresLogo>
+      <TitresLogo>Techno Chef</TitresLogo>
     </template>
 
     <template #links>

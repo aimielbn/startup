@@ -5,7 +5,7 @@ const isOpen = ref(false);
 <template>
   <nav>
     <div
-      class="flex items-center justify-between flex-wrap bg-blue-500 h-20 px-4 border-b border-blue-50"
+      class="flex items-center justify-between flex-wrap bg-gradient-to-br from-blue-300 via-blue-500 to-purple-600 h-20 px-4 border-b"
     >
       <div>
         <nuxt-link to="/">

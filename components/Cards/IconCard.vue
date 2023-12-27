@@ -8,13 +8,16 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="to" class="">
-    <div class="text-5xl text-blue-950 group-hover:text-blue-500 transition">
+  <NuxtLink
+    :to="to"
+    class="rounded-full flex flex-col p-4 group transition items-center justify-center hover:ring-2 hover:ring-blue-400/75 bg-blue-600 my-8 space-y-2"
+  >
+    <div class="text-5xl text-blue-50 group-hover:text-blue-950 transition">
       <slot name="icon" />
     </div>
 
     <div
-      class="bg-blue-600 text-blue-50 font-bold py-2 px-4 rounded-full w-32 hover:shadow-md hover:ring-2 hover:ring-blue-400 transition text-center"
+      class="text-xl text-blue-50 group-hover:text-blue-950 hover:decoration-pink-950 transition"
     >
       <slot />
     </div>

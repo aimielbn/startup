@@ -1,6 +1,6 @@
 <template>
   <h1
-    class="text-3xl text-blue-950 font-sans mb-4 pb-3 pt-8 block border-b"
+    class="text-3xl text-blue-950 font-serif mb-4 pb-3 pt-8 block border-b"
   >
     <slot />
   </h1>

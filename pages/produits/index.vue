@@ -29,7 +29,7 @@ produits.value = data.value.produits;
 
 <template>
   <Container>
-  <TitresH1>Produits</TitresH1>
+  <TitresH1> <i class="fa-solid fa-burger"></i> Produits</TitresH1>
   <p>
     Bienvenue sur notre page "Produits", le foyer de l'innovation et de
     l'excellence. Explorez notre sélection exceptionnelle d'articles
@@ -45,7 +45,7 @@ produits.value = data.value.produits;
       <CardsUserCard>
       <NuxtLink :to="`/produits/${produit.slug}`" class="">
         <NuxtImg :src="produit.image.url" :alt="produit.nom" class="" />
-        <TitresH3>
+        <TitresH3> 
           {{ produit.titre }}
         </TitresH3>
         <TitresH4>{{ produit.prix }}€</TitresH4>

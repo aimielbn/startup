@@ -24,6 +24,7 @@ contenuAccueil.value = data.value.page;
 <template>
   <Container>
     <TitresH1>
+      <i class="fa-solid fa-house"></i>
       {{ contenuAccueil.titre }}
     </TitresH1>
 

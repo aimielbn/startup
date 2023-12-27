@@ -28,7 +28,7 @@ membres.value = data.value.membres;
 
 <template>
     <Container>
-  <TitresH1>Équipe</TitresH1>
+  <TitresH1><i class="fa-solid fa-people-group"></i> Équipe</TitresH1>
 
   <ul v-if="membres" class="">
     <ListsGrid>

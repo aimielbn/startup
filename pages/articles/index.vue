@@ -28,7 +28,7 @@ articles.value = data.value.articles;
 
 <template>
   <Container>
-    <TitresH1>Articles</TitresH1>
+    <TitresH1><i class="fa-solid fa-newspaper"></i> Articles</TitresH1>
     <ul v-if="articles" class="">
       <ListsGrid>
         <li v-for="article in articles" :key="article.id" class="">

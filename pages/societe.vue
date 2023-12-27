@@ -23,7 +23,7 @@ contenuSociete.value = data.value.page;
 
 <template>
   <Container>
-  <TitresH1>
+  <TitresH1><i class="fa-solid fa-building-columns"></i> 
     {{ contenuSociete.titre }}
   </TitresH1>
 

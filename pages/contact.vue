@@ -23,7 +23,7 @@ contenuContact.value = data.value.page;
 
 <template>
   <Container>
-    <TitresH1>
+    <TitresH1> <i class="fa-solid fa-phone"></i>
       {{ contenuContact.titre }}
     </TitresH1>
 
@@ -63,7 +63,7 @@ contenuContact.value = data.value.page;
       <BoutonsPrimaire type="submit">Envoyer</BoutonsPrimaire>
     </InputsForm>
 
-    <TitresH2>Trouvez-nous !</TitresH2>
+    <TitresH2>Trouvez-nous ici !</TitresH2>
 
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25924.78905075417!2d139.7563792!3d35.686883699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c0c0b13f54d%3A0xb630953beee48188!2sChiyoda%2C%20Tokyo%2C%20Japon!5e0!3m2!1sfr!2sbe!4v1703677366120!5m2!1sfr!2sbe"

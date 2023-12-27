@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <Title>Startup</Title>
+    <Title>TechnoChef</Title>
     <Meta name="description" content="Startup" />
   </Head>
   <LayoutsBase>

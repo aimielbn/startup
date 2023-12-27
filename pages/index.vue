@@ -32,9 +32,18 @@ contenuAccueil.value = data.value.page;
     <div
       class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-8 my-8"
     >
-      <CardsIconCard to="/produits">Produits</CardsIconCard>
-      <CardsIconCard to="/contact">Contact</CardsIconCard>
-      <CardsIconCard to="/articles">Blog</CardsIconCard>
+      <CardsIconCard to="/produits"
+        ><template #icon> <i class="fa-solid fa-burger"></i> </template
+        >Produits</CardsIconCard
+      >
+      <CardsIconCard to="/contact"
+        ><template #icon> <i class="fa-solid fa-phone"></i> </template
+        >Contact</CardsIconCard
+      >
+      <CardsIconCard to="/articles"
+        ><template #icon> <i class="fa-solid fa-newspaper"></i> </template
+        >Blog</CardsIconCard
+      >
     </div>
   </Container>
 </template>

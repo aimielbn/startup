@@ -24,9 +24,9 @@ const isOpen = ref(false);
               <i
                 v-if="!isOpen"
                 class="fa-solid fa-bars text-3xl text-blue-50"
-              >Menu</i>
+              ></i>
               <div v-else>
-                <i class="fa-solid fa-xmark text-3xl text-blue-50">X</i>
+                <i class="fa-solid fa-xmark text-3xl text-blue-50"></i>
               </div>
             </button>
           </li>
